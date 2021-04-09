@@ -2,22 +2,6 @@ from flask import Flask, render_template , request
 # from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
-# app.config['SQLALCHEMY_DATABASE_URI'] = False
-
-# db = SQLAlchemy(app)
-
-# class data(db.Model):
-#     sno = db.Column()
-
-# @app.route('/login', methods=['POST'])
-# def do_admin_login():
-#     if request.form['password'] == 'password' and request.form['username'] == 'admin':
-#         session['logged_in'] = True
-#     else:
-#         flash('wrong password!')
-#         return home()
-
 
 @app.route('/login')
 def login():
@@ -27,7 +11,11 @@ def login():
 def register():
     return render_template('signup.html')
 
-@app.route('/')
+@app.route('/create_project')
+def create_project():
+    return render_template('create_project.html')
+
+@app.route('/revisit')
 def revisit():
     return render_template('revisit.html')
 
