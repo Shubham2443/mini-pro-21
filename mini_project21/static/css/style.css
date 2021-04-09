@@ -277,10 +277,11 @@ input[type=text], select, textarea{
   color: black;
 }
 
-
-/*for sip*/
-.mt-250{
-  margin-top:250px;
+.mt-400{
+  margin-top:400px;
+}
+.mt-100{
+  margin-top:100px;
 }
 
 .resultsip{
