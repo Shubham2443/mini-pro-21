@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Model Performance Page</title>
+<h1>Model Stats are Shown Below<h1>
+{% endblock %}
+
+{% block body %}
+	<h3>The number of the model goes here : {{myMLObject.modelname}}<h3>
+	<h3>The name of the model goes here : {{myMLObject.parameters}}<h3>
+	<h3>The params of the model goes here : {{myMLObject.weights}}<h3>
+	<h3>The metrics of the model goes here : {{myMLObject.metrics}}<h3>
+	
+	<h3>The ID of the user is : {{myUserObject.userID}}<h3>
+	<h3>The name of the user is : {{myUserObject.username}}<h3>
+	<h3>The password of the user is : {{myUserObject.password}}<h3>
+	
+	
+	<h3>The data number : {{testdbobject.dataID}}<h3>
+	<h3>The name of the model goes here : {{testdbobject.traineddata}}<h3>
+	<h3>The params of the model goes here : {{testdbobject.validationdata}}<h3>
+	
+	<div class="form">
+		<form action="/second" method="POST">
+			<input type="submit" value="Add to DB">
+		</form>
+	</div>
+
+{% endblock %}
